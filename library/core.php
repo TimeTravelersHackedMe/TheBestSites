@@ -4172,7 +4172,7 @@ if ( ! function_exists( 'cb_review_boxes' ) ) {
 
             $cb_opener = '<div id="cb-review-container" class="cb-review-box' . $cb_review_placement_ret . ' ' . $cb_review_type . ' cb-' . $cb_score_display_type . '-container clearfix" data-cb-pid="' . intval( $cb_post_id ) .'">';
             $cb_opener .= '<div class="cb-review-area website-overview"><div class="cb-review-title">Name: <span class="gray-text">' . get_post_meta($cb_post_id, 'website_name', true) . '</span></div>';
-            $cb_opener .= '<div class="cb-review-title">Type: <span class="gray-text">' . get_post_meta($cb_post_id, 'website_type', true) . '</span>';
+            $cb_opener .= '<div class="cb-review-title">Type: <span class="gray-text">' . get_post_meta($cb_post_id, 'website_type', true) . '</span></div>';
             $cb_opener .= '<div class="cb-review-title">Why ' . get_post_meta($cb_post_id, 'website_name', true) . ' Is On The Best Sites</div>';
             $cb_opener .= '<p class="website-reason">' . get_post_meta($cb_post_id, 'website_reason', true) . '</p>';
             $cb_opener .= '</div>';
