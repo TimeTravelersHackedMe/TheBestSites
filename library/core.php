@@ -3778,13 +3778,13 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                     $cb_fis .= '<div class="social-holder">';
                     $cb_fis .= $website_name . ' is on: ';
                     if($facebook_page_link != '') {
-                        $cb_fis .= '<a href="' . $facebook_page_link . '"><img alt="Facebook Logo" src=" . $facebook_image . "></a>';
+                        $cb_fis .= '<a href="' . $facebook_page_link . '"><img alt="Facebook Logo" src="' . $facebook_image . '"></a>';
                     }
                     if($twitter_page_link != '') {
-                        $cb_fis .= '<a href="' . $twitter_page_link . '"><img alt="Twitter Logo" src=" . $twitter_image . "></a>';
+                        $cb_fis .= '<a href="' . $twitter_page_link . '"><img alt="Twitter Logo" src="' . $twitter_image . '"></a>';
                     }
                     if($google_plus_page_link != '') {
-                        $cb_fis .= '<a href="' . $google_plus_page_link . '"><img alt="Google Plus Logo" src=" . $google_plus_image . "></a>';
+                        $cb_fis .= '<a href="' . $google_plus_page_link . '"><img alt="Google Plus Logo" src="' . $google_plus_image . '"></a>';
                     }
                     $cb_fis .= '</div>';
                 }
