@@ -21,11 +21,11 @@ require_once get_template_directory() . '/library/admin/extensions/class-aqua-re
 if ( ! function_exists( 'cb_image_thumbnails' ) ) {
     function cb_image_thumbnails() {
         if ( ot_get_option( 'cb_fi_100x65', 'on' ) == 'on' ) {
-            add_image_size( 'cb-100-65', 100, 65, true ); // Widgets
+            add_image_size( 'cb-100-65', 100, 50, true ); // Widgets
         }
 
         if ( ot_get_option( 'cb_fi_260x170', 'on' ) == 'on' ) {
-            add_image_size( 'cb-260-170', 260, 170, true ); // Megamenu
+            add_image_size( 'cb-260-170', 260, 130, true ); // Megamenu
         }
 
         if ( ot_get_option( 'cb_fi_360x490', 'on' ) == 'on' ) {
@@ -33,7 +33,7 @@ if ( ! function_exists( 'cb_image_thumbnails' ) ) {
         }
 
         if ( ot_get_option( 'cb_fi_360x240', 'on' ) == 'on' ) {
-            add_image_size( 'cb-360-240', 360, 240, true ); // Blog Style A/Mega menu
+            add_image_size( 'cb-360-240', 360, 180, true ); // Blog Style A/Mega menu
         }
 
         if ( ot_get_option( 'cb_fi_378x300', 'on' ) == 'on' ) {
