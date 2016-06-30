@@ -3773,18 +3773,30 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                 $facebook_image = 'https://thebestsites.com/wp-content/uploads/2013/02/facebook-link.png';
                 $twitter_image = 'https://thebestsites.com/wp-content/uploads/2013/02/twitter-link.png';
                 $google_plus_image = 'https://thebestsites.com/wp-content/uploads/2013/02/google-plus-link.png';
+                $youtube_image = 'https://thebestsites.com/wp-content/uploads/2013/02/youtube-link.png';
+                $alexa_image = 'https://thebestsites.com/wp-content/uploads/2013/02/alexa-link.png';
+                $wikipedia_image = 'https://thebestsites.com/wp-content/uploads/2013/02/wikipedia-link.png';
                 $cb_fis .= '<a href="' . $website_url  . '" class="site-link">Visit ' . $website_name . '</a>';
                 if($facebook_page_link != '' || $twitter_page_link != '' || $google_plus_page_link != '') {
                     $cb_fis .= '<div class="social-holder">';
-                    $cb_fis .= $website_name . ' is on: ';
+                    $cb_fis .= $website_name . ' is on ';
                     if($facebook_page_link != '') {
-                        $cb_fis .= '<a href="' . $facebook_page_link . '"><img alt="Facebook Logo" src="' . $facebook_image . '"></a>';
+                        $cb_fis .= '<a href="' . $facebook_page_link . '"><img alt="Facebook Icon" src="' . $facebook_image . '"></a>';
                     }
                     if($twitter_page_link != '') {
-                        $cb_fis .= '<a href="' . $twitter_page_link . '"><img alt="Twitter Logo" src="' . $twitter_image . '"></a>';
+                        $cb_fis .= '<a href="' . $twitter_page_link . '"><img alt="Twitter Icon" src="' . $twitter_image . '"></a>';
                     }
                     if($google_plus_page_link != '') {
-                        $cb_fis .= '<a href="' . $google_plus_page_link . '"><img alt="Google Plus Logo" src="' . $google_plus_image . '"></a>';
+                        $cb_fis .= '<a href="' . $google_plus_page_link . '"><img alt="Google Plus Icon" src="' . $google_plus_image . '"></a>';
+                    }
+                    if($youtube_link != '') {
+                        $cb_fis .= '<a href="' . $youtube_link . '"><img alt="YouTube Icon" src="' . $youtube_image . '"></a>';
+                    }
+                    if($alexa_link != '') {
+                        $cb_fis .= '<a href="' . $alexa_link . '"><img alt="Alexa Icon" src="' . $alexa_image . '"></a>';
+                    }
+                    if($wikipedia_link != '') {
+                        $cb_fis .= '<a href="' . $wikipedia_link . '"><img alt="Wikipedia Icon" src="' . $wikipedia_image . '"></a>';
                     }
                     $cb_fis .= '</div>';
                 }
