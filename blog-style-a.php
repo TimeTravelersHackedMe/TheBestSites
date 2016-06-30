@@ -14,6 +14,7 @@ if ( $cb_qry->have_posts() ) :
                 <?php cb_thumbnail( '260', '170' ); ?>
                 <?php cb_review_ext_box( $cb_post_id ); ?>
             </div>
+            <a href="<?php get_post_meta($cb_post_id, 'website_url', true ); ?>">Visit <?php get_post_meta($cb_post_id, 'website_name', true); ?></a>
 
             <div class="cb-meta clearfix">
 
