@@ -3742,8 +3742,55 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                 $cb_height = 500;
             }
             $cb_fis = '<div class="cb-mask">';
-            if(in_category('websites') || in_category('webapps')) { $cb_fis .= '<a href="' . get_post_meta($cb_post_id, 'website_url', true)  . '" class="site-link">Visit ' . get_post_meta($cb_post_id, 'website_name', true) . '</a>'; }
+            if(in_category('websites') || in_category('webapps')) {
+                $website_url = get_post_meta($cb_post_id, 'website_url', true);
+                $website_name = get_post_meta($cb_post_id, 'website_name', true);
+                $alexa_link = get_post_meta($cb_post_id, 'alexa_link', true);
+                $youtube_link = get_post_meta($cb_post_id, 'youtube_link', true);
+                $windows_phone_app_link = get_post_meta($cb_post_id, 'windows_phone_app_link', true);
+                $windows_download_link = get_post_meta($cb_post_id, 'windows_download_link', true);
+                $windows_app_link = get_post_meta($cb_post_id, 'windows_app_link', true);
+                $windows_8_app_link = get_post_meta($cb_post_id, 'windows_8_app_link', true);
+                $wikipedia_link = get_post_meta($cb_post_id, 'wikipedia_link', true);
+                $website_type = get_post_meta($cb_post_id, 'website_type', true);
+                $website_reason = get_post_meta($cb_post_id, 'website_reason', true);
+                $twitter_page_link = get_post_meta($cb_post_id, 'twitter_page_link', true);
+                $rss_link = get_post_meta($cb_post_id, 'rss_link', true);
+                $mac_download_link = get_post_meta($cb_post_id, 'mac_download_link', true);
+                $linux_download_link = get_post_meta($cb_post_id, 'linux_download_link', true);
+                $iphone_app_link = get_post_meta($cb_post_id, 'iphone_app_link', true);
+                $ipad_app_link = get_post_meta($cb_post_id, 'ipad_app_link', true);
+                $google_plus_page_link = get_post_meta($cb_post_id, 'google_plus_page_link', true);
+                $firefox_url = get_post_meta($cb_post_id, 'firefox_url', true);
+                $facebook_page_link = get_post_meta($cb_post_id, 'facebook_page_link', true);
+                $crunchbase_link = get_post_meta($cb_post_id, 'crunchbase_link', true);
+                $chrome_extension_link = get_post_meta($cb_post_id, 'chrome_extension_link', true);
+                $chrome_app_link = get_post_meta($cb_post_id, 'chrome_app_link', true);
+                $blackberry_app_link = get_post_meta($cb_post_id, 'blackberry_app_link', true);
+                $best_website_for = get_post_meta($cb_post_id, 'best_website_for', true);
+                $android_app_link = get_post_meta($cb_post_id, 'android_app_link', true);
+                
+                $facebook_image = 'https://thebestsites.com/wp-content/uploads/2013/02/facebook-link.png';
+                $twitter_image = 'https://thebestsites.com/wp-content/uploads/2013/02/twitter-link.png';
+                $google_plus_image = 'https://thebestsites.com/wp-content/uploads/2013/02/google-plus-link.png';
+                $cb_fis .= '<a href="' . $website_url  . '" class="site-link">Visit ' . $website_name . '</a>';
+                if($facebook_page_link != '' || $twitter_page_link != '' || $google_plus_page_link != '') {
+                    $cb_fis .= '<div class="social-holder">';
+                    $cb_fis .= $website_name . ' is on: ';
+                    if($facebook_page_link != '') {
+                        $cb_fis .= '<a href="' . $facebook_page_link . '"><img alt="Facebook Logo" src=" . $facebook_image . "></a>';
+                    }
+                    if($twitter_page_link != '') {
+                        $cb_fis .= '<a href="' . $twitter_page_link . '"><img alt="Twitter Logo" src=" . $twitter_image . "></a>';
+                    }
+                    if($google_plus_page_link != '') {
+                        $cb_fis .= '<a href="' . $google_plus_page_link . '"><img alt="Google Plus Logo" src=" . $google_plus_image . "></a>';
+                    }
+                    $cb_fis .= '</div>';
+                }
+            }
             $cb_fis .= cb_get_thumbnail( $cb_width, $cb_height, $cb_post_id, false ) . $cb_media_data . $cb_credit_line . '</div>';
+            
             $cb_output .= '<div id="cb-featured-image" class="cb-fis cb-fis-block-standard new-stuff">';
 
             if ( $cb_get_fis_tl == 'cb-fis-tl-st-above' ) {
