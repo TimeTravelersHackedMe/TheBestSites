@@ -9,13 +9,13 @@ if ( $cb_qry->have_posts() ) :
         $cb_post_id = $post->ID;
 ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class('cb-blog-style-a cb-module-e cb-separated clearfix'); ?>>
-        
-            <div class="cb-mask cb-img-fw" <?php cb_img_bg_color( $cb_post_id ); ?>>
-                <?php cb_thumbnail( '260', '170' ); ?>
-                <?php cb_review_ext_box( $cb_post_id ); ?>
+            <div class="cb-mask overflow-visible align-center">
+                <div class="cb-img-fw" <?php cb_img_bg_color( $cb_post_id ); ?>>
+                    <?php cb_thumbnail( '260', '170' ); ?>
+                    <?php cb_review_ext_box( $cb_post_id ); ?>
+                </div>
+                <a class="loop-site-link" href="<?php echo esc_url( get_post_meta( $cb_post_id, 'website_url', true ) ); ?>" target="_blank">Visit <?php echo get_post_meta( $cb_post_id, 'website_name', true ); ?></a>
             </div>
-            <a href="<?php get_post_meta($cb_post_id, 'website_url', true ); ?>">Visit <?php get_post_meta($cb_post_id, 'website_name', true); ?></a>
-
             <div class="cb-meta clearfix">
 
                 <h2 class="cb-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
