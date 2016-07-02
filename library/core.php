@@ -3770,13 +3770,8 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                 $best_website_for = get_post_meta($cb_post_id, 'best_website_for', true);
                 $android_app_link = get_post_meta($cb_post_id, 'android_app_link', true);
                 	
-                $facebook_image = 'https://thebestsites.com/wp-content/uploads/2013/02/facebook-link.png';
-                $twitter_image = 'https://thebestsites.com/wp-content/uploads/2013/02/twitter-link.png';
-                $google_plus_image = 'https://thebestsites.com/wp-content/uploads/2013/02/google-plus-link.png';
-                $youtube_image = 'https://thebestsites.com/wp-content/uploads/2013/02/youtube-link.png';
                 $alexa_image = 'https://thebestsites.com/wp-content/uploads/2013/02/alexa-link.png';
-                $wikipedia_image = 'https://thebestsites.com/wp-content/uploads/2013/02/wikipedia-link.png';
-                $crunchbase_image = 'https://thebestsites.com/wp-content/uploads/2013/02/crunchbase-link.png';
+                $crunchbase_image = 'https://thebestsites.com/wp-content/uploads/2012/02/crunchbase.png';
                 $cb_fis .= '<a href="' . $website_url  . '" class="site-link" target="_blank"><span>Visit ' . $website_name . '</span><i class="fa fa-external-link" aria-hidden="true"></i></a>';
                 if($facebook_page_link != '' || $twitter_page_link != '' || $google_plus_page_link != '') {
                     $cb_fis .= '<div class="social-holder">';
