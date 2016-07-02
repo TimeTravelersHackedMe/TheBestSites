@@ -3769,30 +3769,7 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                 $blackberry_app_link = get_post_meta($cb_post_id, 'blackberry_app_link', true);
                 $best_website_for = get_post_meta($cb_post_id, 'best_website_for', true);
                 $android_app_link = get_post_meta($cb_post_id, 'android_app_link', true);
-                	if($rss_link != '') {
-                	$rss = new DOMDocument();
-	$rss->load($rss_link);
-	$feed = array();
-	foreach ($rss->getElementsByTagName('item') as $node) {
-		$item = array ( 
-			'title' => $node->getElementsByTagName('title')->item(0)->nodeValue,
-			'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
-			'link' => $node->getElementsByTagName('link')->item(0)->nodeValue,
-			'date' => $node->getElementsByTagName('pubDate')->item(0)->nodeValue,
-			);
-		array_push($feed, $item);
-	}
-	$limit = 5;
-	for($x=0;$x<$limit;$x++) {
-		$title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
-		$link = $feed[$x]['link'];
-		$description = $feed[$x]['desc'];
-		$date = date('l F d, Y', strtotime($feed[$x]['date']));
-		echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br />';
-		echo '<small><em>Posted on '.$date.'</em></small></p>';
-		echo '<p>'.$description.'</p>';
-	}
-                	}
+                	
                 $facebook_image = 'https://thebestsites.com/wp-content/uploads/2013/02/facebook-link.png';
                 $twitter_image = 'https://thebestsites.com/wp-content/uploads/2013/02/twitter-link.png';
                 $google_plus_image = 'https://thebestsites.com/wp-content/uploads/2013/02/google-plus-link.png';
