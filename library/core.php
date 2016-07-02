@@ -3776,6 +3776,7 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                 $youtube_image = 'https://thebestsites.com/wp-content/uploads/2013/02/youtube-link.png';
                 $alexa_image = 'https://thebestsites.com/wp-content/uploads/2013/02/alexa-link.png';
                 $wikipedia_image = 'https://thebestsites.com/wp-content/uploads/2013/02/wikipedia-link.png';
+                $crunchbase_image = 'https://thebestsites.com/wp-content/uploads/2013/02/crunchbase-link.png';
                 $cb_fis .= '<a href="' . $website_url  . '" class="site-link">Visit ' . $website_name . '</a>';
                 if($facebook_page_link != '' || $twitter_page_link != '' || $google_plus_page_link != '') {
                     $cb_fis .= '<div class="social-holder">';
@@ -3794,6 +3795,9 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                     }
                     if($alexa_link != '') {
                         $cb_fis .= '<a href="' . $alexa_link . '"><img alt="Alexa Icon" src="' . $alexa_image . '"></a>';
+                    }
+                    if($crunchbase_link != '') {
+                        $cb_fis .= '<a href="' . $crunchbase_link . '"><img alt="Wikipedia Icon" src="' . $crunchbase_image . '"></a>';
                     }
                     if($wikipedia_link != '') {
                         $cb_fis .= '<a href="' . $wikipedia_link . '"><img alt="Wikipedia Icon" src="' . $wikipedia_image . '"></a>';
