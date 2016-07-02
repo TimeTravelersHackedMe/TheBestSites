@@ -3782,22 +3782,22 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                     $cb_fis .= '<div class="social-holder">';
                     $cb_fis .= $website_name . ' is on ';
                     if($facebook_page_link != '') {
-                        $cb_fis .= '<a href="' . $facebook_page_link . '" data-cb-tip="Facebook"><img alt="Facebook Icon" src="' . $facebook_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $facebook_page_link . '" data-cb-tip="Facebook"><img alt="Facebook Icon" src="' . $facebook_image . '"></a>';
                     }
                     if($twitter_page_link != '') {
-                        $cb_fis .= '<a href="' . $twitter_page_link . '" data-cb-tip="Twitter"><img alt="Twitter Icon" src="' . $twitter_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $twitter_page_link . '" data-cb-tip="Twitter"><img alt="Twitter Icon" src="' . $twitter_image . '"></a>';
                     }
                     if($google_plus_page_link != '') {
-                        $cb_fis .= '<a href="' . $google_plus_page_link . '" data-cb-tip="Google Plus"><img alt="Google Plus Icon" src="' . $google_plus_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $google_plus_page_link . '" data-cb-tip="Google Plus"><img alt="Google Plus Icon" src="' . $google_plus_image . '"></a>';
                     }
                     if($youtube_link != '') {
-                        $cb_fis .= '<a href="' . $youtube_link . '" data-cb-tip="YouTube"><img alt="YouTube Icon" src="' . $youtube_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $youtube_link . '" data-cb-tip="YouTube"><img alt="YouTube Icon" src="' . $youtube_image . '"></a>';
                     }
                     if($alexa_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot tipper-attached" href="' . $alexa_link . '" data-cb-tip="Alexa"><img alt="Alexa Icon" src="' . $alexa_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $alexa_link . '" data-cb-tip="Alexa"><img alt="Alexa Icon" src="' . $alexa_image . '"></a>';
                     }
                     if($crunchbase_link != '') {
-                        $cb_fis .= '<a class="tipper-attached" href="' . $crunchbase_link . '" data-cb-tip="Crunchbase"><img alt="Wikipedia Icon" src="' . $crunchbase_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $crunchbase_link . '" data-cb-tip="Crunchbase"><img alt="Wikipedia Icon" src="' . $crunchbase_image . '"></a>';
                     }
                     if($wikipedia_link != '') {
                         $cb_fis .= '<a class="cb-tip-bot" href="' . $wikipedia_link . '" data-cb-tip="Wikipedia"><img alt="Wikipedia Icon" src="' . $wikipedia_image . '"></a>';
