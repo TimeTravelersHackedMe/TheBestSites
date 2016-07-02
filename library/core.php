@@ -3777,30 +3777,30 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                 $alexa_image = 'https://thebestsites.com/wp-content/uploads/2013/02/alexa-link.png';
                 $wikipedia_image = 'https://thebestsites.com/wp-content/uploads/2013/02/wikipedia-link.png';
                 $crunchbase_image = 'https://thebestsites.com/wp-content/uploads/2013/02/crunchbase-link.png';
-                $cb_fis .= '<a href="' . $website_url  . '" class="site-link"><span>Visit ' . $website_name . '</span><i class="fa fa-external-link" aria-hidden="true"></i></a>';
+                $cb_fis .= '<a href="' . $website_url  . '" class="site-link" target="_blank"><span>Visit ' . $website_name . '</span><i class="fa fa-external-link" aria-hidden="true"></i></a>';
                 if($facebook_page_link != '' || $twitter_page_link != '' || $google_plus_page_link != '') {
                     $cb_fis .= '<div class="social-holder">';
                     $cb_fis .= '<span>' . $website_name . ' is on</span>';
                     if($facebook_page_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot" href="' . $facebook_page_link . '" data-cb-tip="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $facebook_page_link . '" target="_blank" data-cb-tip="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>';
                     }
                     if($twitter_page_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot" href="' . $twitter_page_link . '" data-cb-tip="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $twitter_page_link . '" target="_blank" data-cb-tip="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
                     }
                     if($google_plus_page_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot" href="' . $google_plus_page_link . '" data-cb-tip="Google Plus"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $google_plus_page_link . '" target="_blank" data-cb-tip="Google Plus"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>';
                     }
                     if($youtube_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot" href="' . $youtube_link . '" data-cb-tip="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $youtube_link . '" target="_blank" data-cb-tip="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a>';
                     }
                     if($alexa_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot" href="' . $alexa_link . '" data-cb-tip="Alexa"><img alt="Alexa Icon" src="' . $alexa_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $alexa_link . '" target="_blank" data-cb-tip="Alexa"><img alt="Alexa Icon" src="' . $alexa_image . '"></a>';
                     }
                     if($crunchbase_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot" href="' . $crunchbase_link . '" data-cb-tip="Crunchbase"><img alt="Wikipedia Icon" src="' . $crunchbase_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $crunchbase_link . '" target="_blank" data-cb-tip="Crunchbase"><img alt="Wikipedia Icon" src="' . $crunchbase_image . '"></a>';
                     }
                     if($wikipedia_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot" href="' . $wikipedia_link . '" data-cb-tip="Wikipedia"><i class="fa fa-wikipedia-w" aria-hidden="true"></i></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $wikipedia_link . '" target="_blank" data-cb-tip="Wikipedia"><i class="fa fa-wikipedia-w" aria-hidden="true"></i></a>';
                     }
                     $cb_fis .= '</div>';
                 }
