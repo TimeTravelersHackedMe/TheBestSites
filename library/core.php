@@ -3794,13 +3794,13 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                         $cb_fis .= '<a href="' . $youtube_link . '" data-cb-tip="YouTube"><img alt="YouTube Icon" src="' . $youtube_image . '"></a>';
                     }
                     if($alexa_link != '') {
-                        $cb_fis .= '<a href="' . $alexa_link . '" data-cb-tip="Alexa"><img alt="Alexa Icon" src="' . $alexa_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot tipper-attached" href="' . $alexa_link . '" data-cb-tip="Alexa"><img alt="Alexa Icon" src="' . $alexa_image . '"></a>';
                     }
                     if($crunchbase_link != '') {
-                        $cb_fis .= '<a href="' . $crunchbase_link . '" data-cb-tip="Crunchbase"><img alt="Wikipedia Icon" src="' . $crunchbase_image . '"></a>';
+                        $cb_fis .= '<a class="tipper-attached" href="' . $crunchbase_link . '" data-cb-tip="Crunchbase"><img alt="Wikipedia Icon" src="' . $crunchbase_image . '"></a>';
                     }
                     if($wikipedia_link != '') {
-                        $cb_fis .= '<a href="' . $wikipedia_link . '" data-cb-tip="Wikipedia"><img alt="Wikipedia Icon" src="' . $wikipedia_image . '"></a>';
+                        $cb_fis .= '<a class="cb-tip-bot" href="' . $wikipedia_link . '" data-cb-tip="Wikipedia"><img alt="Wikipedia Icon" src="' . $wikipedia_image . '"></a>';
                     }
                     $cb_fis .= '</div>';
                 }
