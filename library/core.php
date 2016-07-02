@@ -3777,7 +3777,7 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                 $alexa_image = 'https://thebestsites.com/wp-content/uploads/2013/02/alexa-link.png';
                 $wikipedia_image = 'https://thebestsites.com/wp-content/uploads/2013/02/wikipedia-link.png';
                 $crunchbase_image = 'https://thebestsites.com/wp-content/uploads/2013/02/crunchbase-link.png';
-                $cb_fis .= '<a href="' . $website_url  . '" class="site-link">Visit ' . $website_name . '</a>';
+                $cb_fis .= '<a href="' . $website_url  . '" class="site-link">Visit ' . $website_name . '<i class="fa fa-external-link" aria-hidden="true"></i></a>';
                 if($facebook_page_link != '' || $twitter_page_link != '' || $google_plus_page_link != '') {
                     $cb_fis .= '<div class="social-holder">';
                     $cb_fis .= $website_name . ' is on ';
