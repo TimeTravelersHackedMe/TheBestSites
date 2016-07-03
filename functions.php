@@ -45,7 +45,7 @@ if ( ! function_exists( 'cb_image_thumbnails' ) ) {
         }
 
         if ( ot_get_option( 'cb_fi_759x500', 'on' ) == 'on' ) {
-            add_image_size( 'cb-759-500', 759, 380, true ); // Slider B, Standard featured image, Blog Style D/F/G, Module D
+            add_image_size( 'cb-759-500', 705, 344, true ); // Slider B, Standard featured image, Blog Style D/F/G, Module D
         }
 
         if ( ot_get_option( 'cb_fi_759x600', 'on' ) == 'on' ) {
