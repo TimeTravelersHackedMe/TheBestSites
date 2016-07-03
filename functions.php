@@ -435,3 +435,9 @@ if ( ! function_exists( 'cb_widgets' ) ) {
     }
 }
 add_action( 'after_setup_theme', 'cb_widgets' );
+add_action('set_current_user', 'cc_hide_admin_bar');
+function cc_hide_admin_bar() {
+  if (!current_user_can('edit_posts')) {
+    show_admin_bar(false);
+  }
+}
