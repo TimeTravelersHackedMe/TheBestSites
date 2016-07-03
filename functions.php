@@ -435,3 +435,9 @@ if ( ! function_exists( 'cb_widgets' ) ) {
     }
 }
 add_action( 'after_setup_theme', 'cb_widgets' );
+function themeblvd_disable_admin_bar() { 
+	if ( ! current_user_can('edit_posts') ) {
+		add_filter('show_admin_bar', '__return_false');	
+	}
+}
+add_action( 'after_setup_theme', 'themeblvd_disable_admin_bar' );
