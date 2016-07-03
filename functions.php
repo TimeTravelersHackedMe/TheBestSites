@@ -37,7 +37,7 @@ if ( ! function_exists( 'cb_image_thumbnails' ) ) {
         }
 
         if ( ot_get_option( 'cb_fi_378x300', 'on' ) == 'on' ) {
-            add_image_size( 'cb-378-300', 378, 300, true ); // Slider C, Grid small thumbnails
+            add_image_size( 'cb-378-300', 378, 189, true ); // Slider C, Grid small thumbnails
         }
 
         if ( ot_get_option( 'cb_fi_759x300', 'on' ) == 'on' ) {
@@ -49,7 +49,7 @@ if ( ! function_exists( 'cb_image_thumbnails' ) ) {
         }
 
         if ( ot_get_option( 'cb_fi_759x600', 'on' ) == 'on' ) {
-            add_image_size( 'cb-759-600', 759, 600, true ); // Grid big thumbnails
+            add_image_size( 'cb-759-600', 759, 380, true ); // Grid big thumbnails
         }
 
         if ( ot_get_option( 'cb_fi_1400x600', 'on' ) == 'on' ) {
