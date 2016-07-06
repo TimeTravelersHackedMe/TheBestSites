@@ -441,3 +441,20 @@ function themeblvd_disable_admin_bar() {
 	}
 }
 add_action( 'after_setup_theme', 'themeblvd_disable_admin_bar' );
+function tml_action_url( $url, $action, $instance ) {
+switch ( $action ) {
+case 'register' :
+$url = '/register/';
+break;
+case 'lostpassword' :
+$url = '/lostpassword/';
+break;
+}
+return $url;
+}
+add_filter( 'tml_action_url', 'tml_action_url', 10, 3 );
+function wp_add_placeholder($elements){
+    $elements['placeholder'] = bp_get_the_profile_field_name();
+    return $elements;
+}
+add_action('bp_xprofile_field_edit_html_elements','wp_add_placeholder');
