@@ -73,8 +73,6 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							$windows_download_link = get_post_meta( $cb_post_id, 'windows_download_link', true );
 							$mac_download_link = get_post_meta( $cb_post_id, 'mac_download_link', true );
 							$linux_download_link = get_post_meta( $cb_post_id, 'linux_download_link', true );
-							
-							$blackberry_image_link = 'https://thebestsites.com/wp-content/uploads/2012/02/a92b7e22-f88e-11e3-843b-2cfc30a661d9.jpg';
 							if ($android_app_link != '' || $blackberry_app_link != '' || $iphone_app_link != '' || $windows_phone_app_link != '' || $windows_app_link != '' || $chrome_extension_link != '' || $chrome_app_link != '' || $firefox_url != '') { ?>
 							<div class="website-apps">
 								<h3 class="apps-title">Available On:</h3>
@@ -82,7 +80,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 									<a href="<?php echo $android_app_link ?>"><i class="fa fa-android" aria-hidden="true"></i> Android</a>
 								<?php } ?>
 								<?php if($blackberry_app_link != '') { ?>
-									<a href="<?php echo $blackberry_app_link ?>"><img class="blackberry-image" alt="BlackBerry" src="<?php echo $blackberry_image_link ?>"> BlackBerry</a>
+									<a href="<?php echo $blackberry_app_link ?>">BlackBerry</a>
 								<?php } ?>
 								<?php if($iphone_app_link != '') { ?>
 									<a href="<?php echo $iphone_app_link ?>"><i class="fa fa-apple" aria-hidden="true"></i> iPhone</a>
