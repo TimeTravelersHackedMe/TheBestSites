@@ -65,7 +65,6 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							$android_app_link = get_post_meta( $cb_post_id, 'android_app_link', true );
 							$blackberry_app_link = get_post_meta( $cb_post_id, 'blackberry_app_link', true );
 							$iphone_app_link = get_post_meta( $cb_post_id, 'iphone_app_link', true );
-							$ipad_app_link = get_post_meta( $cb_post_id, 'ipad_app_link', true );
 							$windows_phone_app_link = get_post_meta( $cb_post_id, 'windows_phone_app_link', true );
 							$windows_app_link = get_post_meta( $cb_post_id, 'windows_app_link', true );
 							$chrome_extension_link = get_post_meta( $cb_post_id, 'chrome_extension_link', true );
@@ -74,11 +73,34 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							$windows_download_link = get_post_meta( $cb_post_id, 'windows_download_link', true );
 							$mac_download_link = get_post_meta( $cb_post_id, 'mac_download_link', true );
 							$linux_download_link = get_post_meta( $cb_post_id, 'linux_download_link', true );
-							if ($android_app_link != '' || $blackberry_app_link != '' || $iphone_app_link != '' || $ipad_app_link != '' || $windows_phone_app_link != '' || $windows_app_link != '' || $chrome_extension_link != '' || $chrome_app_link != '' || $firefox_url != '' || $windows_download_link != '' || $mac_download_link != '' || $linux_download_link != '') { ?>
+							
+							$blackberry_image_link = 'https://thebestsites.com/wp-content/uploads/2012/02/a92b7e22-f88e-11e3-843b-2cfc30a661d9.jpg';
+							if ($android_app_link != '' || $blackberry_app_link != '' || $iphone_app_link != '' || $windows_phone_app_link != '' || $windows_app_link != '' || $chrome_extension_link != '' || $chrome_app_link != '' || $firefox_url != '') { ?>
 							<div class="website-apps">
-								<h3>Apps</h3>
+								<h3 class="apps-title">Available On:</h3>
 								<?php if($android_app_link != '') { ?>
-									<a href="<?php echo $android_app_link ?>"><i class="fa fa-android" aria-hidden="true"></i></a>
+									<a href="<?php echo $android_app_link ?>"><i class="fa fa-android" aria-hidden="true"></i> Android</a>
+								<?php } ?>
+								<?php if($blackberry_app_link != '') { ?>
+									<a href="<?php echo $blackberry_app_link ?>"><img class="blackberry-image" alt="BlackBerry" src="<?php echo $blackberry_image_link ?>"> BlackBerry</a>
+								<?php } ?>
+								<?php if($iphone_app_link != '') { ?>
+									<a href="<?php echo $iphone_app_link ?>"><i class="fa fa-apple" aria-hidden="true"></i> iPhone</a>
+								<?php } ?>
+								<?php if($windows_phone_app_link != '') { ?>
+									<a href="<?php echo $windows_phone_app_link ?>"><i class="fa fa-windows" aria-hidden="true"></i> Windows Phone</a>
+								<?php } ?>
+								<?php if($windows_app_link != '') { ?>
+									<a href="<?php echo $windows_app_link ?>"><i class="fa fa-windows" aria-hidden="true"></i> Windows</a>
+								<?php } ?>
+								<?php if($chrome_extension_link != '') { ?>
+									<a href="<?php echo $chrome_extension_link ?>"><i class="fa fa-chrome" aria-hidden="true"></i> Chrome Extension</a>
+								<?php } ?>
+								<?php if($chrome_app_link != '') { ?>
+									<a href="<?php echo $chrome_app_link ?>"><i class="fa fa-chrome" aria-hidden="true"></i> Chrome App</a>
+								<?php } ?>
+								<?php if($firefox_url != '') { ?>
+									<a href="<?php echo $firefox_url ?>"><i class="fa fa-firefox" aria-hidden="true"></i> Firefox</a>
 								<?php } ?>
 							</div>
 							<?php }	?>
