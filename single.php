@@ -62,6 +62,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 
 							<?php if ( ( $cb_featured_image_style == 'off' ) || ( $cb_featured_image_style == 'standard' ) || ( $cb_featured_image_style_cache == 'standard' ) || ( $cb_featured_image_style_cache == 'off' )  ) { cb_featured_image_style( $cb_featured_image_style, $post ); }; ?>
 							<?php 
+							$website_name = get_post_meta( $cb_post_id, 'website_name', true );
 							$android_app_link = get_post_meta( $cb_post_id, 'android_app_link', true );
 							$blackberry_app_link = get_post_meta( $cb_post_id, 'blackberry_app_link', true );
 							$iphone_app_link = get_post_meta( $cb_post_id, 'iphone_app_link', true );
@@ -75,7 +76,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							$linux_download_link = get_post_meta( $cb_post_id, 'linux_download_link', true );
 							if ($android_app_link != '' || $blackberry_app_link != '' || $iphone_app_link != '' || $windows_phone_app_link != '' || $windows_app_link != '' || $chrome_extension_link != '' || $chrome_app_link != '' || $firefox_url != '') { ?>
 							<div class="website-apps">
-								<h3 class="apps-title">Available On:</h3>
+								<h3 class="apps-title"><?php echo $website_name ?> Is Available On:</h3>
 								<?php if($android_app_link != '') { ?>
 									<a href="<?php echo $android_app_link ?>"><i class="fa fa-android" aria-hidden="true"></i> Android</a>
 								<?php } ?>
