@@ -61,7 +61,27 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 						<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
 							<?php if ( ( $cb_featured_image_style == 'off' ) || ( $cb_featured_image_style == 'standard' ) || ( $cb_featured_image_style_cache == 'standard' ) || ( $cb_featured_image_style_cache == 'off' )  ) { cb_featured_image_style( $cb_featured_image_style, $post ); }; ?>
-
+							<?php 
+							$android_app_link = get_post_meta( $cb_post_id, 'android_app_link', true );
+							$blackberry_app_link = get_post_meta( $cb_post_id, 'blackberry_app_link', true );
+							$iphone_app_link = get_post_meta( $cb_post_id, 'iphone_app_link', true );
+							$ipad_app_link = get_post_meta( $cb_post_id, 'ipad_app_link', true );
+							$windows_phone_app_link = get_post_meta( $cb_post_id, 'windows_phone_app_link', true );
+							$windows_app_link = get_post_meta( $cb_post_id, 'windows_app_link', true );
+							$chrome_extension_link = get_post_meta( $cb_post_id, 'chrome_extension_link', true );
+							$chrome_app_link = get_post_meta( $cb_post_id, 'chrome_app_link', true );
+							$firefox_url = get_post_meta( $cb_post_id, 'firefox_url', true );
+							$windows_download_link = get_post_meta( $cb_post_id, 'windows_download_link', true );
+							$mac_download_link = get_post_meta( $cb_post_id, 'mac_download_link', true );
+							$linux_download_link = get_post_meta( $cb_post_id, 'linux_download_link', true );
+							if ($android_app_link != '' || $blackberry_app_link != '' || $iphone_app_link != '' || $ipad_app_link != '' || $windows_phone_app_link != '' || $windows_app_link != '' || $chrome_extension_link != '' || $chrome_app_link != '' || $firefox_url != '' || $windows_download_link != '' || $mac_download_link != '' || $linux_download_link != '') { ?>
+							<div class="website-apps">
+								<h3>Apps</h3>
+								<?php if($android_app_link != '') { ?>
+									<a href="<?php echo $android_app_link ?>"><i class="fa fa-android" aria-hidden="true"></i></a>
+								<?php } ?>
+							</div>
+							<?php }	?>
 							<section class="cb-entry-content clearfix" <?php  if ( ( $cb_review_checkbox == 'on' ) || ( $cb_review_checkbox == '1' ) ) { echo 'itemprop="reviewBody"'; } else { echo 'itemprop="articleBody"'; } ?>>
 
 								<?php the_content(); ?>
