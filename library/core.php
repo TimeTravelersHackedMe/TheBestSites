@@ -5834,9 +5834,9 @@ if ( ! function_exists( 'cb_body_class' ) ) {
         $classes[] = cb_get_site_border();
         $classes[] =  ot_get_option( 'cb_main_menu_alignment', 'cb-menu-al-left' );
 
-        if ( cb_is_woocommerce() ) {
+        if ( cb_is_woocommerce() || ( ( function_exists('is_bbpress') ) && ( is_bbpress() ) ) ||  ( ( function_exists('is_buddypress') ) && ( is_buddypress() ) ) ) {
             $classes[] = cb_get_post_sidebar_position();
-        }    
+        }
 
         if ( is_singular() ) {
             global $post;
