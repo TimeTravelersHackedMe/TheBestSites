@@ -14,7 +14,7 @@ if ( $cb_qry->have_posts() ) :
                     <?php cb_thumbnail( '260', '170' ); ?>
                     <?php cb_review_ext_box( $cb_post_id ); ?>
                 </div>
-                <a class="loop-site-link" href="<?php echo esc_url( get_post_meta( $cb_post_id, 'website_url', true ) ); ?>" target="_blank">Visit <?php echo get_post_meta( $cb_post_id, 'website_name', true ); ?></a>
+                <?php if( in_category('websites', $cb_post_id) || in_category('webapps', $cb_post_id)) { ?><a class="loop-site-link" href="<?php echo esc_url( get_post_meta( $cb_post_id, 'website_url', true ) ); ?>" target="_blank">Visit <?php echo get_post_meta( $cb_post_id, 'website_name', true ); ?></a><?php } ?>
             </div>
             <div class="cb-meta clearfix">
 
