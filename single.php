@@ -105,7 +105,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							<?php }	?>
 							<?php 
 							$website_url = get_post_meta( $cb_post_id, 'website_url', true );
-							if($website_url != '') {
+							if($website_url != '' && $website_url != null) {
 								echo '<h3>Hi this is a test</h3>';
 							}
 							?>
