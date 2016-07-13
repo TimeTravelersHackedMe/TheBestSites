@@ -104,9 +104,25 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							</div>
 							<?php }	?>
 							<?php 
+							function pure_url($url) {
+   if ( substr($url, 0, 7) == 'http://' ) {
+      $url = substr($url, 7);
+   }
+   if ( substr($url, 0, 8) == 'https://' ) {
+      $url = substr($url, 8);
+   }
+   if ( substr($url, 0, 4) == 'www.') {
+      $url = substr($url, 4);
+   }
+   if ( strpos($url, '/') !== false ) {
+      $ex = explode('/', $url);
+      $url = $ex['0'];
+   } 
+   return $url;
+}
 							$website_url = get_post_meta( $cb_post_id, 'website_url', true );
 							if(in_category('websites') || in_category('webapps')) {
-								AlexaRankbySiteName($website_url);
+								AlexaRankbySiteName(pure_url($website_url));
 							}
 							?>
 							<section class="cb-entry-content clearfix" <?php  if ( ( $cb_review_checkbox == 'on' ) || ( $cb_review_checkbox == '1' ) ) { echo 'itemprop="reviewBody"'; } else { echo 'itemprop="articleBody"'; } ?>>
