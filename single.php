@@ -105,7 +105,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							<?php }	?>
 							<?php 
 							$website_url = get_post_meta( $cb_post_id, 'website_url', true );
-							if(is_category('Website Review') || is_category('Webapp Review')) {
+							if(in_category('websites') || in_category('webapps')) {
 								echo $website_url;
 							}
 							?>
