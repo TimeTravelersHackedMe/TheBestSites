@@ -104,6 +104,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							</div>
 							<?php }	?>
 							<?php 
+							if(in_category('websites') || in_category('webapps')) {
 							function pure_url($url) {
    if ( substr($url, 0, 7) == 'http://' ) {
       $url = substr($url, 7);
@@ -121,10 +122,14 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
    return $url;
 }
 							$website_url = get_post_meta( $cb_post_id, 'website_url', true );
-							if(in_category('websites') || in_category('webapps')) {
-								AlexaRankbySiteName(pure_url($website_url));
+							$alexa_rank = get_post_meta($cb_post_id, 'alexa_rank', true);
+							if($alexa_rank == '') {
+								$alexa_rank = AlexaRankbySiteName(pure_url($website_url));
+								update_post_meta($cb_post_id, 'alexa_rank', $alexa_rank);
 							}
 							?>
+							<div class="alexa-rank"><?php $website_name ?> is ranked <?php $alexa_rank ?> globally.</div>
+							<?php } ?>
 							<section class="cb-entry-content clearfix" <?php  if ( ( $cb_review_checkbox == 'on' ) || ( $cb_review_checkbox == '1' ) ) { echo 'itemprop="reviewBody"'; } else { echo 'itemprop="articleBody"'; } ?>>
 
 								<?php the_content(); ?>
