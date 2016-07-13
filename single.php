@@ -125,12 +125,11 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							$alexa_rank = get_post_meta($cb_post_id, 'alexa_rank', true);
 							if($alexa_rank == '') {
 								echo $alexa_rank;
-								echo '<div class="alexa-rank">';
+								echo '<div class="alexa-rank"><h3>';
 								echo $website_name;
 								echo '\'s traffic rank is <span>';
 								$alexa_rank = AlexaRankbySiteName(pure_url($website_url));
-								echo '</span> globally.';
-								update_post_meta($cb_post_id, 'alexa_rank', $alexa_rank);
+								echo '</span> globally.</h3></div>';
 							}
 							?>
 							<?php } ?>
