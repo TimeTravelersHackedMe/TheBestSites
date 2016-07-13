@@ -124,6 +124,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							$website_url = get_post_meta( $cb_post_id, 'website_url', true );
 							$alexa_rank = get_post_meta($cb_post_id, 'alexa_rank', true);
 							if($alexa_rank == '') {
+								echo $alexa_rank;
 								echo '<div class="alexa-rank">';
 								echo $website_name;
 								echo ' is ranked ';
