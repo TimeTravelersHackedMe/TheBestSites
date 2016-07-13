@@ -106,7 +106,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							<?php 
 							$website_url = get_post_meta( $cb_post_id, 'website_url', true );
 							if(in_category('websites') || in_category('webapps')) {
-								echo $website_url;
+								echo getAlexaRankbySiteName($website_url);
 							}
 							?>
 							<section class="cb-entry-content clearfix" <?php  if ( ( $cb_review_checkbox == 'on' ) || ( $cb_review_checkbox == '1' ) ) { echo 'itemprop="reviewBody"'; } else { echo 'itemprop="articleBody"'; } ?>>
