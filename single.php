@@ -106,7 +106,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							<?php 
 							$website_url = get_post_meta( $cb_post_id, 'website_url', true );
 							if($website_url != '' && $website_url != null) {
-								echo '<h3>Hi this is a test</h3>';
+								echo '<h3>Hi this is a test' + $website_url + '</h3>';
 							}
 							?>
 							<section class="cb-entry-content clearfix" <?php  if ( ( $cb_review_checkbox == 'on' ) || ( $cb_review_checkbox == '1' ) ) { echo 'itemprop="reviewBody"'; } else { echo 'itemprop="articleBody"'; } ?>>
