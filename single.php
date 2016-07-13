@@ -127,13 +127,12 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 								echo $alexa_rank;
 								echo '<div class="alexa-rank">';
 								echo $website_name;
-								echo ' is ranked ';
+								echo ' is ranked <span>';
 								$alexa_rank = AlexaRankbySiteName(pure_url($website_url));
-								echo ' globally.';
+								echo '</span> globally. <i class="fa fa-question-circle" aria-hidden="true" data-cb-tip="Pulled from Alexa rankings."></i>';
 								update_post_meta($cb_post_id, 'alexa_rank', $alexa_rank);
 							}
 							?>
-							<div class="alexa-rank"><?php echo $website_name ?> is ranked <?php echo $alexa_rank ?> globally.</div>
 							<?php } ?>
 							<section class="cb-entry-content clearfix" <?php  if ( ( $cb_review_checkbox == 'on' ) || ( $cb_review_checkbox == '1' ) ) { echo 'itemprop="reviewBody"'; } else { echo 'itemprop="articleBody"'; } ?>>
 
