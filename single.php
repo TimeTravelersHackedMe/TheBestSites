@@ -129,7 +129,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 								echo $website_name;
 								echo '\'s traffic rank is <span>';
 								$alexa_rank = AlexaRankbySiteName(pure_url($website_url));
-								echo '</span> globally.</h3></div>';
+								echo '</span> globally</h3></div>';
 							}
 							?>
 							<?php } ?>
