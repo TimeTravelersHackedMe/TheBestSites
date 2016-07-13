@@ -3788,12 +3788,6 @@ if ( ! function_exists( 'cb_get_featured_image_style' ) ) {
                     if($youtube_link != '') {
                         $cb_fis .= '<a class="cb-tip-bot" href="' . $youtube_link . '" target="_blank" data-cb-tip="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a>';
                     }
-                    if($alexa_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot" href="' . $alexa_link . '" target="_blank" data-cb-tip="Alexa"><img alt="Alexa Icon" src="' . $alexa_image . '"></a>';
-                    }
-                    if($crunchbase_link != '') {
-                        $cb_fis .= '<a class="cb-tip-bot" href="' . $crunchbase_link . '" target="_blank" data-cb-tip="Crunchbase"><img alt="Wikipedia Icon" src="' . $crunchbase_image . '"></a>';
-                    }
                     if($wikipedia_link != '') {
                         $cb_fis .= '<a class="cb-tip-bot" href="' . $wikipedia_link . '" target="_blank" data-cb-tip="Wikipedia"><i class="fa fa-wikipedia-w" aria-hidden="true"></i></a>';
                     }
