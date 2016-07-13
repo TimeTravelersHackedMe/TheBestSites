@@ -127,9 +127,9 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 								echo $alexa_rank;
 								echo '<div class="alexa-rank">';
 								echo $website_name;
-								echo ' is ranked <span>';
+								echo '\'s traffic rank is <span>';
 								$alexa_rank = AlexaRankbySiteName(pure_url($website_url));
-								echo '</span> globally. <a href="#"  data-cb-tip="Pulled from Alexa rankings." rel="nofollow"><i class="fa fa-question-circle" aria-hidden="true"></i></a>';
+								echo '</span> globally.';
 								update_post_meta($cb_post_id, 'alexa_rank', $alexa_rank);
 							}
 							?>
