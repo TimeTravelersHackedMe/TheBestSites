@@ -5025,11 +5025,9 @@ if ( ! function_exists( 'cb_logo' ) ) {
 
             ?>
                 <div id="logo">
-                    <?php if ( ( $cb_logo_h1 == true ) && ( is_front_page() ) ) { echo '<h1>'; } ?>
                     <a href="<?php echo esc_url( home_url() );?>">
                         <img src="<?php  echo esc_url( $cb_logo ); ?>" alt="<?php esc_attr( $cb_logo_alt );  ?> logo" <?php if ( $cb_retina_logo != NULL ) { echo 'data-at2x="' . esc_url( $cb_retina_logo ) . '"'; } ?>>
                     </a>
-                    <?php if ( ( $cb_logo_h1 == true ) && ( is_front_page() ) ) { echo '</h1>'; } ?>
                 </div>
             <?php
         }
