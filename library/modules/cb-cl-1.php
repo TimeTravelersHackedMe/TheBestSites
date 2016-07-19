@@ -66,10 +66,10 @@ foreach ( $cb_arr as $key => $value) {
     
             <div class="cb-grid-feature cb-s <?php echo ot_get_option( 'cb_grid_tile_design', 'cb-meta-style-4'); ?> cb-feature-<?php echo esc_attr( $i ); ?> clearfix">
 
-                <div class="cb-grid-img"><img src="<?php echo esc_url( $cb_img[0] ); ?>" alt=""></div>
+                <div class="cb-grid-img"><img src="<?php echo esc_url( $cb_img[0] ); ?>" alt="<?php echo ( $key['cb_cl_text'] ); ?>"></div>
 
                 <div class="cb-article-meta">
-                    <h2><a href="<?php echo esc_url( $key['cb_cl'] ); ?>"><?php echo ( $key['cb_cl_text'] ); ?></a></h2>
+                    <h3><a href="<?php echo esc_url( $key['cb_cl'] ); ?>"><?php echo ( $key['cb_cl_text'] ); ?></a></h3>
                </div>
 
                <a href="<?php echo esc_url( $key['cb_cl'] ); ?>" class="cb-link-overlay"></a>
