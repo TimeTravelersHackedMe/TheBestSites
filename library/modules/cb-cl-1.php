@@ -69,7 +69,7 @@ foreach ( $cb_arr as $key => $value) {
                 <div class="cb-grid-img"><img src="<?php echo esc_url( $cb_img[0] ); ?>" alt="<?php echo ( $key['cb_cl_text'] ); ?>"></div>
 
                 <div class="cb-article-meta">
-                    <h3><a href="<?php echo esc_url( $key['cb_cl'] ); ?>"><?php echo ( $key['cb_cl_text'] ); ?></a></h3>
+                    <h2><a href="<?php echo esc_url( $key['cb_cl'] ); ?>"><?php echo ( $key['cb_cl_text'] ); ?></a></h2>
                </div>
 
                <a href="<?php echo esc_url( $key['cb_cl'] ); ?>" class="cb-link-overlay"></a>
