@@ -122,15 +122,37 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
    return $url;
 }
 							$website_url = get_post_meta( $cb_post_id, 'website_url', true );
-							$alexa_rank = get_post_meta($cb_post_id, 'alexa_rank', true);
-							if($alexa_rank == '') {
-								echo $alexa_rank;
-								echo '<div class="alexa-rank"><h3>';
+							echo '<div class="alexa-rank"><h3>';
 								echo $website_name;
 								echo '\'s traffic rank is <span>';
 								$alexa_rank = AlexaRankbySiteName(pure_url($website_url));
 								echo '</span> globally</h3></div>';
+							$rss_link = get_post_meta( $cb_post_id, 'rss_link', true);
+	if($rss_link != '') {
+		$rss = new DOMDocument();
+	$rss->load('http://wordpress.org/news/feed/');
+	$feed = array();
+	foreach ($rss->getElementsByTagName('item') as $node) {
+		$item = array ( 
+			'title' => $node->getElementsByTagName('title')->item(0)->nodeValue,
+			'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
+			'link' => $node->getElementsByTagName('link')->item(0)->nodeValue,
+			'date' => $node->getElementsByTagName('pubDate')->item(0)->nodeValue,
+			);
+		array_push($feed, $item);
+	}
+	$limit = 5;
+	for($x=0;$x<$limit;$x++) {
+		$title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
+		$link = $feed[$x]['link'];
+		$description = $feed[$x]['desc'];
+		$date = date('l F d, Y', strtotime($feed[$x]['date']));
+		echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br />';
+		echo '<small><em>Posted on '.$date.'</em></small></p>';
+		echo '<p>'.$description.'</p>';
+	}
 							}
+?>
 							?>
 							<?php } ?>
 							<section class="cb-entry-content clearfix" <?php  if ( ( $cb_review_checkbox == 'on' ) || ( $cb_review_checkbox == '1' ) ) { echo 'itemprop="reviewBody"'; } else { echo 'itemprop="articleBody"'; } ?>>
