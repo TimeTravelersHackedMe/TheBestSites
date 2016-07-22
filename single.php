@@ -138,7 +138,6 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							
 							<footer class="cb-article-footer">
 								<?php
-									if ( ot_get_option('cb_tags_onoff', 'on') != 'off' ) { the_tags('<p class="cb-tags cb-post-footer-block"> ', '', '</p>'); }
 																$rss_link = get_post_meta( $cb_post_id, 'rss_link', true);
 	if($rss_link != '') {
 		$rss = new DOMDocument();
@@ -166,6 +165,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 	}
 	echo '</div>';
 							}
+							if ( ot_get_option('cb_tags_onoff', 'on') != 'off' ) { the_tags('<p class="cb-tags cb-post-footer-block"> ', '', '</p>'); }
 									echo cb_sharing_block( $post );
 									echo cb_post_footer_ad();
 									if ( $post->post_type != 'attachment' ) { cb_previous_next_links(); }
