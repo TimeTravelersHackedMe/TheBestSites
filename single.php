@@ -130,7 +130,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 							$rss_link = get_post_meta( $cb_post_id, 'rss_link', true);
 	if($rss_link != '') {
 		$rss = new DOMDocument();
-	$rss->load('http://wordpress.org/news/feed/');
+	$rss->load($rss_link);
 	$feed = array();
 	foreach ($rss->getElementsByTagName('item') as $node) {
 		$item = array ( 
