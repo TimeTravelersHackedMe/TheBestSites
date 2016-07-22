@@ -142,15 +142,17 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 		array_push($feed, $item);
 	}
 	$limit = 5;
+	echo '<div id="rss-feed"><h3>';
+	echo $website_name;
+	echo '\'s RSS Feed</h3>';
 	for($x=0;$x<$limit;$x++) {
 		$title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
 		$link = $feed[$x]['link'];
 		$description = $feed[$x]['desc'];
 		$date = date('l F d, Y', strtotime($feed[$x]['date']));
-		echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br />';
-		echo '<small><em>Posted on '.$date.'</em></small></p>';
-		echo '<p>'.$description.'</p>';
+		echo '<p><a href="'.$link.'" title="'.$title.'">'.$title.'</a></p>';
 	}
+	echo '</div>';
 							}
 ?>
 							?>
