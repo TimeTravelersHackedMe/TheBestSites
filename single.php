@@ -127,7 +127,19 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 								echo '\'s traffic rank is <span>';
 								$alexa_rank = AlexaRankbySiteName(pure_url($website_url));
 								echo '</span> globally</h3></div>';
-							$rss_link = get_post_meta( $cb_post_id, 'rss_link', true);
+?>
+							<?php } ?>
+							<section class="cb-entry-content clearfix" <?php  if ( ( $cb_review_checkbox == 'on' ) || ( $cb_review_checkbox == '1' ) ) { echo 'itemprop="reviewBody"'; } else { echo 'itemprop="articleBody"'; } ?>>
+
+								<?php the_content(); ?>
+								<?php wp_link_pages('before=<div class="cb-pagination clearfix">&after=</div>&next_or_number=number&pagelink=<span class="cb-page">%</span>'); ?>
+								
+							</section> <!-- end article section -->
+							
+							<footer class="cb-article-footer">
+								<?php
+									if ( ot_get_option('cb_tags_onoff', 'on') != 'off' ) { the_tags('<p class="cb-tags cb-post-footer-block"> ', '', '</p>'); }
+																$rss_link = get_post_meta( $cb_post_id, 'rss_link', true);
 	if($rss_link != '') {
 		$rss = new DOMDocument();
 	$rss->load($rss_link);
@@ -154,19 +166,7 @@ if ( ( ot_get_option( 'cb_postload_onoff', 'off' ) == 'off' ) && ( $cb_fis_size 
 	}
 	echo '</div>';
 							}
-?>
-							<?php } ?>
-							<section class="cb-entry-content clearfix" <?php  if ( ( $cb_review_checkbox == 'on' ) || ( $cb_review_checkbox == '1' ) ) { echo 'itemprop="reviewBody"'; } else { echo 'itemprop="articleBody"'; } ?>>
-
-								<?php the_content(); ?>
-								<?php wp_link_pages('before=<div class="cb-pagination clearfix">&after=</div>&next_or_number=number&pagelink=<span class="cb-page">%</span>'); ?>
-								
-							</section> <!-- end article section -->
-							
-							<footer class="cb-article-footer">
-								<?php
-									if ( ot_get_option('cb_tags_onoff', 'on') != 'off' ) { the_tags('<p class="cb-tags cb-post-footer-block"> ', '', '</p>'); }
-									echo cb_sharing_block( $post ); 
+									echo cb_sharing_block( $post );
 									echo cb_post_footer_ad();
 									if ( $post->post_type != 'attachment' ) { cb_previous_next_links(); }
 									echo cb_about_author( $post );
