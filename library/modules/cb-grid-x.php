@@ -122,7 +122,7 @@ if ( $cb_qry->have_posts() ) : while ( $cb_qry->have_posts() ) : $cb_qry->the_po
         <?php } ?>
 
         <div class="cb-article-meta">
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <?php cb_byline( $cb_post_id ); ?>
        </div>
 
