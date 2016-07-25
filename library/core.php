@@ -534,7 +534,7 @@ if ( ! function_exists( 'cb_add_extras_main_menu' ) ) {
             $cb_logo_nav_padding = ot_get_option( 'cb_logo_nav_padding', '10' );
 
             if ( $cb_logo_nav_url != NULL ) {
-                $cb_menu_output .= '<li id="cb-nav-logo" class="' . esc_attr( $cb_logo_in_nav_when ) . '-type" style="padding-top: ' . intval( $cb_logo_nav_padding ) . 'px"><a href="' . esc_url( home_url() ) . '"><img src="' . esc_url( $cb_logo_nav_url ) . '" alt="site logo" data-at2x="' . esc_url( $cb_logo_nav_retina_url ) . '" ></a></li>';
+                $cb_menu_output .= '<li id="cb-nav-logo" class="' . esc_attr( $cb_logo_in_nav_when ) . '-type" style="padding-top: ' . intval( $cb_logo_nav_padding ) . 'px"><a href="' . esc_url( home_url() ) . '"><img src="' . esc_url( $cb_logo_nav_url ) . '" alt="The Best Sites" data-at2x="' . esc_url( $cb_logo_nav_retina_url ) . '" ></a></li>';
             }
         }
 
@@ -5026,7 +5026,7 @@ if ( ! function_exists( 'cb_logo' ) ) {
             ?>
                 <div id="logo">
                     <a href="<?php echo esc_url( home_url() );?>">
-                        <img src="<?php  echo esc_url( $cb_logo ); ?>" alt="<?php esc_attr( $cb_logo_alt );  ?> logo" <?php if ( $cb_retina_logo != NULL ) { echo 'data-at2x="' . esc_url( $cb_retina_logo ) . '"'; } ?>>
+                        <img src="<?php  echo esc_url( $cb_logo ); ?>" alt="The Best Sites" <?php if ( $cb_retina_logo != NULL ) { echo 'data-at2x="' . esc_url( $cb_retina_logo ) . '"'; } ?>>
                     </a>
                 </div>
             <?php
