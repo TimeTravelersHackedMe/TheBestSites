@@ -2129,7 +2129,7 @@ if ( ! class_exists( 'cb_mega_walker' ) ) {
                     $cb_qry_latest->the_post();
                     $cb_post_id = get_the_ID();
 
-                    $cb_posts .= ' <li class="' . implode( " ", array_diff( get_post_class( "cb-looper cb-article-" . $i . " cb-mm-posts-count-" . $cb_ppp . " cb-style-1 clearfix", $cb_post_id ), array('hentry') ) ) . '"><div class="cb-mask cb-img-fw" ' . cb_get_img_bg_color( $cb_post_id ) . '>' . cb_get_thumbnail( $cb_width, $cb_height, $cb_post_id) . '</div><div class="cb-meta"><h2 class="cb-post-title"><a href="' . esc_url( get_permalink( $cb_post_id ) ) . '">' . get_the_title() . '</a></h2>' . cb_get_byline_date( $cb_post_id ) . '</div></li>';
+                    $cb_posts .= ' <li class="' . implode( " ", array_diff( get_post_class( "cb-looper cb-article-" . $i . " cb-mm-posts-count-" . $cb_ppp . " cb-style-1 clearfix", $cb_post_id ), array('hentry') ) ) . '"><div class="cb-mask cb-img-fw" ' . cb_get_img_bg_color( $cb_post_id ) . '>' . cb_get_thumbnail( $cb_width, $cb_height, $cb_post_id) . '</div><div class="cb-meta cb-post-title"><a href="' . esc_url( get_permalink( $cb_post_id ) ) . '">' . get_the_title() . '</a>' . cb_get_byline_date( $cb_post_id ) . '</div></li>';
                     $i++;
                 }
                 wp_reset_postdata();
